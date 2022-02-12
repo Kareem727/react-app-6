@@ -47,16 +47,16 @@ function App() {
       //     releaseDate: movieData.release_date,
       //   };
       // });
-      setMovies(CreatedMovie);
-    } catch (error) {
-      setError(error.message);
-    }
-    setIsLoading(false);
-  }, []);
+                      setMovies(CreatedMovie);
+                    } catch (error) {
+                      setError(error.message);
+                    }
+                    setIsLoading(false);
+                  }, []);
 
-  useEffect(() => {
-    fetchMoviesHandler();
-  }, [fetchMoviesHandler]);
+                  useEffect(() => {
+                    fetchMoviesHandler();
+                  }, [fetchMoviesHandler]);
 
   async function addMovieHandler(movie) {
    const response = await fetch("https://react-http-5c5b5-default-rtdb.firebaseio.com/movies.json",{
